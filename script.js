@@ -1,173 +1,10 @@
-/*//Converting to number
-console.log(Number("23"));
-console.log(Number("23"));
-console.log(+"23" === Number("23")); //true
 
-//parsing to number => start with number
-console.log(Number.parseInt("23px")); //23
-console.log(Number.parseInt("  23px  ")); //23
-console.log(Number.parseInt("e23")); //NaN
-
-console.log(Number.parseInt("23.5px")); //23
-console.log(Number.parseFloat("23.5px")); //23.5
-console.log(Number.parseFloat("  23.5px  ")); //23.5
-console.log(Number.parseFloat("e23.5")); //NaN
-
-//checked if number is NaN
-console.log(Number.isNaN("23.5px")); //false
-console.log(Number.isNaN(23.5)); //false
-console.log(Number.isNaN(23 / 0)); //false (Infinty)
-console.log(Number.isNaN("a" / 8)); //true
-console.log(Number.isNaN(+"20")); //false
-
-//checked if number is Finite
-console.log(Number.isFinite(+"20")); //true
-console.log(Number.isFinite(+"20x")); //false
-console.log(Number.isFinite(+"20" / 0)); //false
-console.log(Number.isFinite(20)); //true
-
-//checked if number is Intege
-console.log(Number.isInteger(20)); //true
-console.log(Number.isInteger(20.5)); //false
-console.log(Number.isInteger(20 / 0)); //false
-console.log(Number.isInteger(+"20")); //true
-*/
-
-/*//squar and power of Numbers
-console.log(Math.sqrt(25)); //5
-console.log(25 ** (1 / 2)); //5
-console.log(25 ** (1 / 2)); //5
-console.log(2 ** 3); //8
-
-//max & min
-console.log(Math.max(2, 5, 8, 10, 66, 15, 8)); //66
-console.log(Math.max(2, 5, 8, 10, "66", 15, 8)); //66
-console.log(Math.max(2, 5, 8, 10, "66px", 15, 8)); //NaN
-console.log(Math.min(2, 5, 8, 10, 66, 15, 8)); //2
-
-//Area of ciral with 10px diameter
-console.log(Math.PI * Number.parseFloat("10px") ** 2);
-
-console.log(Math.trunc(Math.random() * 6) + 1);
-
-//random number between 2 values
-const between = (max, min) => Math.trunc(Math.random() * (max - min) + 1) + min;
-console.log(between(10, 5));
-
-//Rounding Numbers
-console.log(Math.round(2.5)); //3
-console.log(Math.round(2.3)); //2
-
-console.log(Math.ceil(2.5)); //3
-console.log(Math.ceil(2.2)); //3
-
-console.log(Math.floor(2.8)); //2
-console.log(Math.floor(2.3)); //2
-
-console.log(Math.floor(2.3)); //2
-console.log(Math.trunc(2.3)); //2
-
-//floor => to least
-console.log(Math.floor(-2.3)); //3
-console.log(Math.trunc(-2.3)); //2
-
-console.log((2.3).toFixed()); //2
-console.log((2.3).toFixed(1)); //2.3
-console.log((-2.3).toFixed(2)); //2.30
-console.log(+(2.3).toFixed(1)); //2.3 => number not String
-*/
-
-/*// The Remainder Operator => remaining of division
-console.log(5 % 2); //1
-console.log(8 % 3); //2
-console.log(8 % 2); //0
-
-// Working with BigInt
-const maxSave = Number.MAX_SAFE_INTEGER;
-console.log(maxSave); //9007199254740991
-console.log(maxSave + 1); //9007199254740992
-console.log(maxSave - 1); //9007199254740990
-console.log(maxSave * 10); //90071992547409900
-console.log(maxSave / 10); //900719925474099.1
-
-console.log(4838430248342043823408394839483204n);
-console.log(BigInt(48384302));
-
-console.log(10n + 10n); //20n
-console.log(10n * 10n); //100n
-// console.log(10n + 10); //Error
-// console.log(Math.sqrt(100n)); //Error
-
-const n = BigInt(48384302);
-console.log(4838430248342043823408394839483204n * n); //234104070341716447649026445248796866263608n
-
-console.log(20n > 15); //true
-console.log(20n === 20); //false
-console.log(typeof 20n); //bigint
-console.log(20n == "20"); //true
-
-console.log(n + " is REALLY big!!!"); //48384302 is REALLY big!!!
-
-// Divisions
-console.log(11n / 3n); //3n
-console.log(10 / 3); //3.3333333333333335
-*/
-
-// const calcDaysPassed = (date1, date2) =>
-//  Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
-// console.log(calcDaysPassed(new Date(2022, 11, 2), new Date(2022, 11, 10)));
-
-/*//Intl Method
-//DateTimeFormat()
-const date = new Date();
-const options = {
-  hour: 'numeric',
-  minute: 'numeric',
-  day: 'numeric',
-  month: 'long',
-  year: 'numeric',
-};
-const local = ['eg-US', 'eg-UK', 'pt-PT', 'ar-EG'];
-local.forEach((val, i) => {
-  const formatedDate = new Intl.DateTimeFormat(val, options).format(date);
-  console.log(`Form Data as ${val}: ${formatedDate}`);
-});
-
-//NumberFormat()
-const num = 32515336.25;
-const numOptions = {
-  // unit: "celsius",
-  // unit: 'kilometer-per-hour',
-  style: 'currency',
-  currency: 'EUR',
-  // useGrouping: false,
-};
-local.forEach((val, i) => {
-  const formatedNumber = new Intl.NumberFormat(val, numOptions).format(num);
-  console.log(`Form Data as ${val}: ${formatedNumber}`);
-});
-*/
-
-/*//setTimeout
-const nums = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
-const numsTimer = setTimeout(
-  function (n1, n2) {
-    nums.push(n1, n2);
-    console.log(...nums);
-  },
-  3000,
-  22,
-  24
-);
-//clearTimeout
-if (nums.includes(6)) clearTimeout(numsTimer);
-*/
 
 /////////////////-------Banckist App-------//////////
 // DIFFERENT DATA! Contains movement dates, currency and locale
 
 const account1 = {
-  owner: 'Jonas Schmedtmann',
+  owner: 'Mostafa Elferawy',
   movements: [200, 455.23, -306.5, 25000, -642.21, -133.9, 79.97, 1300, 1400],
   interestRate: 1.2, // %
   pin: 1111,
@@ -188,7 +25,7 @@ const account1 = {
 };
 
 const account2 = {
-  owner: 'Jessica Davis',
+  owner: 'Mona Ali',
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
   interestRate: 1.5,
   pin: 2222,
